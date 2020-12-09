@@ -21,9 +21,13 @@ use zOmArRD\plugin\CustomMOTD;
 
 class MotdChange extends Command implements PluginIdentifiableCommand
 {
-    /** @var CustomMOTD  */
+    /** @var CustomMOTD */
     protected $plugin;
 
+    /**
+     * MotdChange constructor.
+     * @param CustomMOTD $customMOTD
+     */
     public function __construct(CustomMOTD $customMOTD){
      $this->plugin = $customMOTD;
      $this->setPermission("custom.motd");
@@ -34,6 +38,12 @@ class MotdChange extends Command implements PluginIdentifiableCommand
      );
     }
 
+    /**
+     * @param CommandSender $sender
+     * @param string $commandLabel
+     * @param array $args
+     * @return bool|mixed
+     */
     public function execute(CommandSender $sender, string $commandLabel, array $args)
     {
         if ($sender->hasPermission("custom.motd")) {
