@@ -58,6 +58,11 @@ class CustomMOTD extends PluginBase
         $this->getLogger()->info(self::PREFIX . " §aLoaded!");
     }
 
+    public function onDisable()
+    {
+        $this->getLogger()->info(self::PREFIX . " §cDisabled!");
+    }
+
     public static function getCF(string $cfn)
     {
         return $file = new Config(CustomMOTD::getInstance()->getDataFolder() . $cfn . ".yml", Config::YAML);
