@@ -13,11 +13,9 @@ declare(strict_types=1);
  */
 namespace zOmArRD\plugin\cmd;
 
-use Cassandra\Custom;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
-use pocketmine\command\utils\CommandException;
 use pocketmine\plugin\Plugin;
 use zOmArRD\plugin\CustomMOTD;
 
@@ -57,8 +55,11 @@ class MotdChange extends Command implements PluginIdentifiableCommand
         return true;
     }
 
+    /**
+     * @return Plugin
+     */
     public function getPlugin(): Plugin
     {
-        // TODO: Implement getPlugin() method.
+        return CustomMOTD::getInstance();
     }
 }
