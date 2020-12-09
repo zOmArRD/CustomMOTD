@@ -1,0 +1,7 @@
+name: CustomMOTD
+description: Another MOTD Changer
+main: zOmArRD\plugin\CustoMOTD
+version: 1.0.0
+api: 3.0.0
+author: zOmArRD
+website: https://github.com/zOmArRD
